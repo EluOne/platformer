@@ -21,7 +21,6 @@
 import os
 import pygame
 import tmx
-from pygame import joystick
 
 
 def load_sliced_sprites(self, w, h, filename):
@@ -31,7 +30,7 @@ def load_sliced_sprites(self, w, h, filename):
 
     # use pygame subsurface for splitting into frames from one image.
     master_width, master_height = master_image.get_size()
-    for i in xrange(int(master_width/w)):
+    for i in range(int(master_width/w)):
         images.append(master_image.subsurface((i*w,0,w,h)))
     return images
 
